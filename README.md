@@ -36,7 +36,7 @@ Please refer to the python file for optimal training parameters.
 
 
 ## Reference
-
+```
 @inproceedings{ren2024tiger,
   title={TIGER: Time-Varying Denoising Model for 3D Point Cloud Generation with Diffusion Process},
   author={Ren, Zhiyuan and Kim, Minchul and Liu, Feng and Liu, Xiaoming},
@@ -44,3 +44,4 @@ Please refer to the python file for optimal training parameters.
   pages={9462--9471},
   year={2024}
 }
+```
