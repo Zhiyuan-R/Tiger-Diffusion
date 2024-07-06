@@ -23,3 +23,7 @@ cd metrics/PyTorchEMD
 python setup.py install
 cp build/**/emd_cuda.cpython-36m-x86_64-linux-gnu.so .
 ```
+
+## Data
+
+For generation, we use ShapeNet point cloud, which can be downloaded [here](https://github.com/stevenygd/PointFlow).
