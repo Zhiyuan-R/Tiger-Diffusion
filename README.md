@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Shape Generation and Completion Through Point-Voxel Diffusion
 <p align="center">
   <img src="assets/pvd_teaser.gif" width="80%"/>
@@ -8,10 +9,15 @@
 Implementation of Shape Generation and Completion Through Point-Voxel Diffusion
 
 [Linqi Zhou](https://alexzhou907.github.io), [Yilun Du](https://yilundu.github.io/), [Jiajun Wu](https://jiajunwu.com/)
+=======
+# :tiger:Tiger-Time-varying-Diffusion-Model-for-Point-Cloud-Generation
+This is the official code for the CVPR 2024 Publication: Tiger: Time-Varying Denoising Model for 3D Point Cloud Generation with Diffusion Process
+>>>>>>> origin/main
 
 ## Requirements:
 
 Make sure the following environments are installed.
+<<<<<<< HEAD
 
 ```
 python==3.6
@@ -23,6 +29,19 @@ tqdm==4.32.1
 open3d==0.9.0
 trimesh=3.7.12
 scipy==1.5.1
+=======
+(Code tested with cuda11)
+
+```
+python
+pytorch
+torchvision
+matplotlib
+tqdm
+open3d
+trimesh
+scipy
+>>>>>>> origin/main
 ```
 
 Install PyTorchEMD by
@@ -32,12 +51,16 @@ python setup.py install
 cp build/**/emd_cuda.cpython-36m-x86_64-linux-gnu.so .
 ```
 
+<<<<<<< HEAD
 The code was tested on Unbuntu with Titan RTX. 
 
+=======
+>>>>>>> origin/main
 ## Data
 
 For generation, we use ShapeNet point cloud, which can be downloaded [here](https://github.com/stevenygd/PointFlow).
 
+<<<<<<< HEAD
 For completion, we use ShapeNet rendering provided by [GenRe](https://github.com/xiumingzhang/GenRe-ShapeHD).
 We provide script `convert_cam_params.py` to process the provided data.
 
@@ -88,10 +111,13 @@ Multimodal completion on two Redwood 3DScan chairs.
 <p align="center">
   <img src="assets/mm_redwood.gif" width="80%"/>
 </p>
+=======
+>>>>>>> origin/main
 
 ## Reference
 
 ```
+<<<<<<< HEAD
 @inproceedings{Zhou_2021_ICCV,
     author    = {Zhou, Linqi and Du, Yilun and Wu, Jiajun},
     title     = {3D Shape Generation and Completion Through Point-Voxel Diffusion},
@@ -105,3 +131,13 @@ Multimodal completion on two Redwood 3DScan chairs.
 ## Acknowledgement
 
 For any questions related to codes and experiment setting, please contact [Linqi Zhou](linqizhou@stanford.edu) and [Yilun Du](yilundu@mit.edu). 
+=======
+@inproceedings{ren2024tiger,
+  title={TIGER: Time-Varying Denoising Model for 3D Point Cloud Generation with Diffusion Process},
+  author={Ren, Zhiyuan and Kim, Minchul and Liu, Feng and Liu, Xiaoming},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={9462--9471},
+  year={2024}
+}
+```
+>>>>>>> origin/main
