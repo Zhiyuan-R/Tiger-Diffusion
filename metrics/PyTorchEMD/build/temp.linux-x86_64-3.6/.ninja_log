@@ -1,0 +1,3 @@
+# ninja log v5
+1	18255	1720234773992074000	/research/cvl-renzhiy1/research_lab/public_code/TIGER-Time-varying-Diffusion-Point-Cloud-Generation/metrics/PyTorchEMD/build/temp.linux-x86_64-3.6/cuda/emd_kernel.o	21ee6b04f73ca501
+0	30965	1720234786659071000	/research/cvl-renzhiy1/research_lab/public_code/TIGER-Time-varying-Diffusion-Point-Cloud-Generation/metrics/PyTorchEMD/build/temp.linux-x86_64-3.6/cuda/emd.o	4d04b8407307396a

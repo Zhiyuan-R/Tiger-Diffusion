@@ -225,7 +225,8 @@ class PVCNN2Base(nn.Module):
     def forward(self, inputs, t):
 
         temb =  self.embedf(self.get_timestep_embedding(t, inputs.device))[:,:,None].expand(-1,-1,inputs.shape[-1])
-
+        import pdb
+        pdb.set_trace()
         # inputs : [B, in_channels + S, N]
         coords, features = inputs[:, :3, :].contiguous(), inputs
         coords_list, in_features_list = [], []

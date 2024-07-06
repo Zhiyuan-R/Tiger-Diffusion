@@ -9,6 +9,7 @@ from torch.distributions import Normal
 from utils.file_utils import *
 from utils.visualize import *
 from model.pvcnn_generation import PVCNN2Base
+from model.tiger import Tiger_Transformer
 import torch.distributed as dist
 from datasets.shapenet_data_pc import ShapeNet15kPointClouds
 
@@ -374,7 +375,7 @@ class GaussianDiffusion:
             return total_bpd_b.mean(), vals_bt_.mean(), prior_bpd_b.mean(), mse_bt_.mean()
 
 
-class PVCNN2(PVCNN2Base):
+class Tiger_Transformer_custom(Tiger_Transformer):
     sa_blocks = [
         ((32, 2, 32), (1024, 0.1, 32, (32, 64))),
         ((64, 3, 16), (256, 0.2, 32, (64, 128))),
@@ -397,12 +398,13 @@ class PVCNN2(PVCNN2Base):
         )
 
 
+
 class Model(nn.Module):
     def __init__(self, args, betas, loss_type: str, model_mean_type: str, model_var_type:str):
         super(Model, self).__init__()
         self.diffusion = GaussianDiffusion(betas, loss_type, model_mean_type, model_var_type)
 
-        self.model = PVCNN2(num_classes=args.nc, embed_dim=args.embed_dim, use_att=args.attention,
+        self.model = Tiger_Transformer_custom(num_classes=args.nc, embed_dim=args.embed_dim, use_att=args.attention,
                             dropout=args.dropout, extra_feature_channels=0)
 
     def prior_kl(self, x0):
@@ -726,13 +728,6 @@ def train(gpu, opt, output_dir, noises_init):
             logger.info('Generation: train')
             model.train()
 
-
-
-
-
-
-
-
         if (epoch + 1) % opt.saveIter == 0:
 
             if should_diag:
@@ -789,7 +784,7 @@ def parse_args():
     parser.add_argument('--dataroot', default='ShapeNetCore.v2.PC15k/')
     parser.add_argument('--category', default='chair')
 
-    parser.add_argument('--bs', type=int, default=16, help='input batch size')
+    parser.add_argument('--bs', type=int, default=64, help='input batch size')
     parser.add_argument('--workers', type=int, default=16, help='workers')
     parser.add_argument('--niter', type=int, default=10000, help='number of epochs to train for')
 
