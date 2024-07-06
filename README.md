@@ -16,7 +16,6 @@ tqdm
 open3d
 trimesh
 scipy
->>>>>>> origin/main
 ```
 
 Install PyTorchEMD by
