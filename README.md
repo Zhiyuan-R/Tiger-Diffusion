@@ -27,3 +27,16 @@ cp build/**/emd_cuda.cpython-36m-x86_64-linux-gnu.so .
 ## Data
 
 For generation, we use ShapeNet point cloud, which can be downloaded [here](https://github.com/stevenygd/PointFlow).
+
+
+## Reference
+
+```
+@inproceedings{ren2024tiger,
+  title={TIGER: Time-Varying Denoising Model for 3D Point Cloud Generation with Diffusion Process},
+  author={Ren, Zhiyuan and Kim, Minchul and Liu, Feng and Liu, Xiaoming},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={9462--9471},
+  year={2024}
+}
+```
