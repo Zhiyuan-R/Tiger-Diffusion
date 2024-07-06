@@ -16,3 +16,10 @@ open3d
 trimesh
 scipy
 ```
+
+Install PyTorchEMD by
+```
+cd metrics/PyTorchEMD
+python setup.py install
+cp build/**/emd_cuda.cpython-36m-x86_64-linux-gnu.so .
+```
